@@ -6,10 +6,10 @@ export default function PricingSection() {
 
         <div className="pricing-card">
           <div className="pricing-header">
-            <h3>ベーシックプラン</h3>
+            <h3 className="highlight-gradient">ベーシックプラン</h3>
             <div className="price">
               <span className="currency">¥</span>
-              <span className="amount">2,980</span>
+              <span className="amount highlight-gold">2,980</span>
               <span className="period">/月（税込）</span>
             </div>
           </div>
@@ -23,21 +23,23 @@ export default function PricingSection() {
               <li><i className="fas fa-check"></i> デモ・モックアプリの共有</li>
               <li><i className="fas fa-check"></i> 定期ライブ配信（週1回または月1回）</li>
               <li><i className="fas fa-check"></i> アーカイブ視聴（過去の全配信）</li>
-              <li><i className="fas fa-check"></i> Discord質問し放題</li>
-              <li><i className="fas fa-check"></i> コードレビューサポート</li>
+              <li><i className="fas fa-check"></i> <span className="highlight-teal">Discord質問し放題</span></li>
+              <li><i className="fas fa-check"></i> <span className="highlight-coral">コードレビューサポート</span></li>
               <li><i className="fas fa-check"></i> 個別最適化アンケート</li>
               <li><i className="fas fa-check"></i> 学習ロードマップ提供</li>
             </ul>
           </div>
 
           <div className="pricing-highlight">
-            <p><strong>シンプルで手頃な価格で、充実したサポートを受けられます。</strong></p>
+            <p><strong>シンプルで<span className="highlight-gold">手頃な価格</span>で、<span className="highlight-gradient">充実したサポート</span>を受けられます。</strong></p>
           </div>
 
-          <a href="#cta" className="pricing-cta">
-            <span>今すぐ参加する</span>
-            <i className="fas fa-arrow-right"></i>
-          </a>
+          <div style={{ textAlign: 'center' }}>
+            <a href="#cta" className="pricing-cta">
+              <span>今すぐ参加する</span>
+              <i className="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>

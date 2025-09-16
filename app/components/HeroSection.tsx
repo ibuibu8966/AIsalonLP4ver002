@@ -35,15 +35,15 @@ export default function HeroSection() {
       <div className="hero-content">
         <div className="hero-badge">
           <span className="badge-icon">⚡</span>
-          AI×プログラミングサロン
+          <span className="highlight-gold">AI×プログラミングサロン</span>
         </div>
         <h1 className="hero-title">
           <span className="title-line">未来のスキルを身につけ、</span>
           <span className="title-line accent-text">キャリアを加速させよう</span>
         </h1>
         <div className="hero-description">
-          <p>毎日の作業、もっと楽にできるはずなのに...</p>
-          <p>明日の業務から使える"武器"を手に入れて、働き方を変えてみませんか？</p>
+          <p>毎日の作業、<span className="highlight-teal">もっと楽にできる</span>はずなのに...</p>
+          <p>明日の業務から使える<span className="highlight-gradient">"武器"</span>を手に入れて、<span className="highlight-coral">働き方を変えて</span>みませんか？</p>
         </div>
         <div className="hero-cta">
           <a href="#cta" className="cta-primary">
@@ -57,15 +57,15 @@ export default function HeroSection() {
         </div>
         <div className="hero-stats">
           <div className="stat-item">
-            <span className="stat-number">30日</span>
+            <span className="stat-number highlight-gold">30日</span>
             <span className="stat-label">で実用ツール完成</span>
           </div>
           <div className="stat-item">
-            <span className="stat-number">90日</span>
+            <span className="stat-number highlight-coral">90日</span>
             <span className="stat-label">で副業レベル到達</span>
           </div>
           <div className="stat-item">
-            <span className="stat-number">2-3h</span>
+            <span className="stat-number highlight-teal">2-3h</span>
             <span className="stat-label">毎日の時短を実現</span>
           </div>
         </div>

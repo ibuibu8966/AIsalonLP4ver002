@@ -13,8 +13,8 @@ export default function FeaturesSection() {
             <div className="feature-icon">
               <i className="fas fa-brain"></i>
             </div>
-            <h3>AI・生成AI専門カリキュラム</h3>
-            <p>最新ツールの"正しい使い方"を厳選し、実務で再現できる型を配布</p>
+            <h3 className="highlight-gradient">AI・生成AI専門カリキュラム</h3>
+            <p>最新ツールの<span className="highlight-gold">"正しい使い方"</span>を厳選し、<span className="highlight-teal">実務で再現できる型</span>を配布</p>
             <div className="feature-details">
               <h4>基礎カリキュラム:</h4>
               <ul>
@@ -24,7 +24,7 @@ export default function FeaturesSection() {
                 <li>そのまま流用できるテンプレ（データ抽出・要件整理・仕様書下書き）</li>
               </ul>
               <div className="achievement">
-                <strong>到達目安:</strong> 30日で「日常タスクの自動化」＋「議事録のAI化」を1つ完成
+                <strong className="highlight-coral">到達目安:</strong> <span className="highlight-gold">30日</span>で「日常タスクの自動化」＋「議事録のAI化」を1つ完成
               </div>
             </div>
           </div>
@@ -34,8 +34,8 @@ export default function FeaturesSection() {
             <div className="feature-icon">
               <i className="fas fa-code"></i>
             </div>
-            <h3>本格プログラミング実装</h3>
-            <p>基礎→API連携→運用まで、"動かし続ける"実装力を獲得</p>
+            <h3 className="highlight-gradient">本格プログラミング実装</h3>
+            <p>基礎→API連携→運用まで、<span className="highlight-coral">"動かし続ける"</span><span className="highlight-teal">実装力</span>を獲得</p>
             <div className="feature-details">
               <h4>学べること:</h4>
               <ul>
@@ -45,7 +45,7 @@ export default function FeaturesSection() {
                 <li>コードレビューによる品質向上とベストプラクティス習得</li>
               </ul>
               <div className="achievement">
-                <strong>到達目安:</strong> 90日で社内/副業向けのツールを1本公開
+                <strong className="highlight-coral">到達目安:</strong> <span className="highlight-gold">90日</span>で社内/副業向けのツールを1本公開
               </div>
             </div>
           </div>
@@ -55,8 +55,8 @@ export default function FeaturesSection() {
             <div className="feature-icon">
               <i className="fas fa-users"></i>
             </div>
-            <h3>コミュニティ学習環境</h3>
-            <p>Discordで"詰まりを最短で解消"し、成果物を積み上げる</p>
+            <h3 className="highlight-gradient">コミュニティ学習環境</h3>
+            <p>Discordで<span className="highlight-purple">"詰まりを最短で解消"</span>し、<span className="highlight-gold">成果物を積み上げる</span></p>
             <div className="feature-details">
               <h4>サポート内容:</h4>
               <ul>
@@ -66,7 +66,7 @@ export default function FeaturesSection() {
                 <li>コードレビュー（可読性・保守性・例外処理・運用設計）</li>
               </ul>
               <div className="achievement">
-                <strong>到達目安:</strong> 毎週の提出物をポートフォリオ化
+                <strong className="highlight-coral">到達目安:</strong> <span className="highlight-teal">毎週の提出物</span>をポートフォリオ化
               </div>
             </div>
           </div>
