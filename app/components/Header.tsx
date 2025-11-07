@@ -1,11 +1,13 @@
+import Link from 'next/link'
+
 export default function Header() {
   return (
     <header className="header">
       <nav className="nav">
-        <div className="nav-logo">
+        <Link href="/" className="nav-logo">
           <i className="fas fa-graduation-cap brand-icon"></i>
           <span className="logo-text gradient-text">AI×Programming Salon</span>
-        </div>
+        </Link>
         <div className="nav-links">
           <a href="#features" className="nav-link">特徴</a>
           <a href="#curriculum" className="nav-link">カリキュラム</a>

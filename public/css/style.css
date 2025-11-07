@@ -192,6 +192,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-cyber);
     font-weight: 900;
     font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
 }
 
 .neon-icon {
@@ -1695,48 +1703,149 @@ section {
     font-size: 1.2rem;
 }
 
-/* Footer */
+/* ==================== FOOTER - CLEAN & SIMPLE ==================== */
+
+/* Base Footer Styles */
 .footer {
-    background: var(--bg-darker);
-    border-top: 1px solid rgba(0, 255, 255, 0.2);
-    padding: var(--spacing-lg) 0 var(--spacing-md);
+    background: #000000;
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+    padding: 50px 0 30px;
 }
 
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 60px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
 }
 
-.footer-logo {
+/* Brand Section */
+.footer-brand-section {
     display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-brand {
+    display: inline-flex;
     align-items: center;
-    gap: var(--spacing-xs);
-    font-family: var(--font-cyber);
-    font-weight: 900;
-    font-size: 1.2rem;
+    gap: 12px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.footer-brand i {
+    font-size: 2rem;
     color: var(--neon-cyan);
 }
 
-.footer-text {
-    color: var(--text-secondary);
-    font-style: italic;
+.footer-brand span {
+    font-family: var(--font-cyber);
+    font-size: 1.5rem;
+    font-weight: 900;
 }
 
-.footer-bottom {
-    text-align: center;
-    padding-top: var(--spacing-md);
-    border-top: 1px solid rgba(0, 255, 255, 0.1);
-    color: var(--text-muted);
+.footer-description {
+    color: rgba(180, 180, 180, 0.8);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Links Group */
+.footer-links-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.footer-links-column h4 {
+    font-family: var(--font-cyber);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(0, 255, 255, 0.7);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.footer-links-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-column li {
+    color: rgba(200, 200, 200, 0.8);
     font-size: 0.9rem;
+    line-height: 2;
 }
 
-/* Additional Animations */
-@keyframes shimmer {
-    0% { left: -100%; }
-    100% { left: 100%; }
+.footer-links-column a {
+    color: rgba(200, 200, 200, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links-column a:hover {
+    color: var(--neon-cyan);
+}
+
+/* Bottom Section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-legal-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-legal-links a {
+    color: rgba(150, 150, 150, 0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover {
+    color: var(--neon-cyan);
+}
+
+.footer-legal-links .separator {
+    color: rgba(150, 150, 150, 0.3);
+}
+
+.footer-copyright {
+    color: rgba(130, 130, 130, 0.6);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-links-group {
+        grid-template-columns: 90px 1fr 180px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-links-group {
+        grid-template-columns: 80px 1fr 160px;
+        gap: 20px;
+    }
 }
 
 /* Responsive Design */
@@ -1871,5 +1980,344 @@ section {
     .final-cta-button {
         font-size: 1.1rem;
         padding: var(--spacing-sm) var(--spacing-md);
+    }
+}
+
+/* ==================== Legal Pages Styles ==================== */
+
+.legal-page {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+.legal-content {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.legal-content .section-title {
+    font-size: 3rem;
+    margin-bottom: calc(var(--spacing-xl) * 1.5);
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: var(--spacing-md);
+}
+
+.legal-content .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    border-radius: 2px;
+}
+
+.legal-section {
+    background: linear-gradient(135deg, rgba(20, 20, 30, 0.9) 0%, rgba(15, 15, 25, 0.95) 100%);
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    border-radius: var(--radius-md);
+    padding: calc(var(--spacing-md) * 1.5);
+    margin-bottom: calc(var(--spacing-md) * 1.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 255, 255, 0.1) inset;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.legal-section:hover {
+    border-color: rgba(0, 255, 255, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 255, 255, 0.15), 0 0 0 1px rgba(0, 255, 255, 0.2) inset;
+    transform: translateY(-3px);
+}
+
+.legal-section h2 {
+    font-size: 1.65rem;
+    margin-bottom: calc(var(--spacing-sm) * 1.5);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, rgba(0, 255, 255, 0.5), rgba(255, 0, 127, 0.3), transparent) 1;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.legal-section h3 {
+    font-size: 1.3rem;
+    margin-top: calc(var(--spacing-md) * 1.2);
+    margin-bottom: var(--spacing-sm);
+    color: var(--neon-cyan);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.legal-section p {
+    line-height: 2;
+    margin-bottom: calc(var(--spacing-sm) * 1.3);
+    color: rgba(176, 176, 176, 0.95);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.legal-section ul,
+.legal-section ol {
+    margin-left: calc(var(--spacing-md) * 1.2);
+    margin-bottom: calc(var(--spacing-sm) * 1.3);
+    line-height: 2;
+    padding-left: var(--spacing-sm);
+}
+
+.legal-section li {
+    margin-bottom: calc(var(--spacing-xs) * 1.5);
+    color: rgba(176, 176, 176, 0.9);
+    font-size: 0.98rem;
+    line-height: 1.9;
+    position: relative;
+    padding-left: var(--spacing-xs);
+}
+
+.legal-section li::marker {
+    color: var(--neon-cyan);
+    font-weight: 600;
+}
+
+.legal-section li ul,
+.legal-section li ol {
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.legal-section strong {
+    color: rgba(220, 220, 220, 1);
+    font-weight: 600;
+}
+
+.subsection {
+    margin-top: calc(var(--spacing-md) * 1.3);
+    padding-left: calc(var(--spacing-sm) * 1.5);
+    border-left: 3px solid rgba(255, 0, 127, 0.4);
+    background: rgba(255, 0, 127, 0.02);
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.contact-info {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.08) 0%, rgba(0, 255, 255, 0.03) 100%);
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    border-radius: var(--radius-md);
+    padding: calc(var(--spacing-md) * 1.3);
+    margin-top: calc(var(--spacing-md) * 1.3);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1), 0 0 0 1px rgba(0, 255, 255, 0.1) inset;
+    backdrop-filter: blur(5px);
+}
+
+.contact-info p {
+    margin-bottom: calc(var(--spacing-xs) * 1.5);
+    line-height: 1.9;
+    color: rgba(190, 190, 190, 0.95);
+    font-size: 0.98rem;
+    letter-spacing: 0.3px;
+}
+
+.contact-info strong {
+    color: var(--neon-cyan);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.neon-link {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 2px 4px;
+}
+
+.neon-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.7);
+}
+
+.neon-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 127, 0.1));
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    border-radius: 4px;
+}
+
+.neon-link:hover::before {
+    opacity: 1;
+}
+
+.neon-link:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.9), 0 0 30px rgba(255, 0, 127, 0.5);
+    transform: translateX(3px);
+}
+
+.neon-link:hover::after {
+    width: 100%;
+}
+
+.note {
+    font-size: 0.88rem;
+    color: rgba(140, 140, 140, 0.9);
+    font-style: italic;
+    margin-top: calc(var(--spacing-xs) * 1.2);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: rgba(0, 255, 255, 0.02);
+    border-left: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 0 4px 4px 0;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+}
+
+.legal-footer {
+    text-align: center;
+    margin-top: calc(var(--spacing-xl) * 1.5);
+    padding-top: calc(var(--spacing-md) * 1.5);
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent) 1;
+    position: relative;
+}
+
+.legal-footer::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.legal-footer p {
+    margin-bottom: calc(var(--spacing-xs) * 1.3);
+    color: rgba(150, 150, 150, 0.85);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+.company-info {
+    color: var(--neon-cyan);
+    font-weight: 700;
+    margin-top: var(--spacing-md);
+    font-size: 1.05rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    letter-spacing: 0.5px;
+}
+
+/* Legal Pages Mobile Responsive */
+@media (max-width: 768px) {
+    .legal-page {
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+
+    .legal-content {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .legal-content .section-title {
+        font-size: 2.2rem;
+        margin-bottom: calc(var(--spacing-xl) * 1.2);
+        letter-spacing: 1px;
+    }
+
+    .legal-section {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .legal-section h2 {
+        font-size: 1.4rem;
+        letter-spacing: 0.3px;
+    }
+
+    .legal-section h3 {
+        font-size: 1.15rem;
+    }
+
+    .legal-section p,
+    .legal-section li {
+        font-size: 0.95rem;
+        line-height: 1.85;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-page {
+        padding-top: 80px;
+    }
+
+    .legal-content {
+        padding: var(--spacing-md) calc(var(--spacing-sm) * 0.8);
+    }
+
+    .legal-content .section-title {
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .legal-section {
+        padding: var(--spacing-sm) calc(var(--spacing-sm) * 1.2);
+    }
+
+    .legal-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .legal-section h3 {
+        font-size: 1.05rem;
+    }
+
+    .legal-section p,
+    .legal-section li {
+        font-size: 0.92rem;
+    }
+
+    .legal-section ul,
+    .legal-section ol {
+        margin-left: var(--spacing-sm);
+        padding-left: var(--spacing-xs);
+    }
+
+    .contact-info {
+        padding: var(--spacing-sm);
+    }
+
+    .neon-link {
+        font-size: 0.95rem;
     }
 }

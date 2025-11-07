@@ -23,6 +23,14 @@ import Footer from './components/Footer'
 export default function Home() {
   useEffect(() => {
     const loadScripts = async () => {
+      // Check if scripts already exist
+      const existingMainScript = document.querySelector('script[src="/js/main.js"]')
+      const existingAnimScript = document.querySelector('script[src="/js/animations.js"]')
+
+      if (existingMainScript || existingAnimScript) {
+        return // Scripts already loaded, skip
+      }
+
       const mainScript = document.createElement('script')
       mainScript.src = '/js/main.js'
       mainScript.async = true
