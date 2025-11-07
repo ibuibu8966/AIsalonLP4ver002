@@ -1831,20 +1831,51 @@ section {
 /* Responsive */
 @media (max-width: 992px) {
     .footer-links-group {
-        grid-template-columns: 90px 1fr 180px;
-        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
     }
 }
 
 @media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 30px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
     .footer-links-group {
-        grid-template-columns: 80px 1fr 160px;
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-links-column {
+        text-align: left;
+    }
+
+    .footer-links-column h4 {
+        margin-bottom: 12px;
+    }
+
+    .footer-links-column li {
+        line-height: 1.8;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .footer-legal-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-legal-links .separator {
+        display: none;
     }
 }
 
